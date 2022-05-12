@@ -293,6 +293,7 @@ int main(int args, char *argv[]) {
         printf("SERVER_PORT: %d\n", SERVER_PORT);
     }
     if(socket_connect()==SOCKET_NOT_CONNECTED){
+        close(connect_socket);
         exit(1);
     }
     if(args>3){
